@@ -1,3 +1,17 @@
+commit: 6317eea58c3e0e191394fbb240a7484dfaad5a5b
+Author: Mon Apr 26 00:10:37 2010 -0300
+  Date: Otávio Fernandes <otaviof@gmail.com>
+
+	upgrading Makefile and other files
+
+
+commit: 4006f26dc33665fb7861cec66d18e0c4200e8180
+Author: Mon Apr 26 00:10:01 2010 -0300
+  Date: Otávio Fernandes <otaviof@gmail.com>
+
+	adding methods for fetch CSV modules information, and a class for holding
+
+
 commit: 138509daf092df6db24d95d7fc1bc37cd5f518c2
 Author: Sun Apr 25 16:04:42 2010 -0300
   Date: Otávio Fernandes <otaviof@gmail.com>

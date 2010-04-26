@@ -16,6 +16,8 @@ my $cpan = new FreeBSD::Perl::CPAN()
 my $ratings_csv = $cpan->fetch_ratings();
 
 ok( $ratings_csv,    "Should Pass, we must fetch ratings." );
-ok( -f $ratings_csv, "Should Pass, ratings file must be save on FS." )
+ok( -f $ratings_csv, "Should Pass, ratings file must be save on FS." );
+
+unlink($ratings_csv);
 
 __END__

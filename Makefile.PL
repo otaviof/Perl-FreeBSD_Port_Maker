@@ -11,6 +11,7 @@ WriteMakefile(
     VERSION_FROM => 'lib/FreeBSD/Port/Maker.pm',
     PL_FILES     => {},
     PREREQ_PM    => {
+        'File::Slurp'  => 9999.13,
         'Git::Wrapper' => 0.006,
         'LWP::Simple'  => 5.827,
         'Test::More'   => 0.94,
