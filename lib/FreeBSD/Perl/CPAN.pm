@@ -18,11 +18,11 @@ has 'csv_url' => (
 );
 
 has 'sanitize' => (
-    is          => 'rw',
-    isa         => 'Int',
-    initializer => sub {1},
-    clearer     => 'clear_sanitize',
-    predicate   => 'has_sanitize',
+    is        => 'rw',
+    isa       => 'Bool',
+    default   => 1,
+    clearer   => 'clear_sanitize',
+    predicate => 'has_sanitize',
 );
 
 sub fetch_ratings {

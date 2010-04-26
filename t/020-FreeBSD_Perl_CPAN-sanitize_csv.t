@@ -32,7 +32,6 @@ ok( !$cpan->sanitize_csv( "/var/tmp/" . rand( 10**10 ) . ".txt" ),
     "Should Fail, file parameter must exists." );
 ok( $cpan->sanitize_csv($csv_file),
     "Should Pass, with an valid CSV file path." );
-
 ok( search_for_dirty_csv_lines(@csv_contents),
     "Should Pass, This CSV file is dirty!"
 );
@@ -43,7 +42,7 @@ ok( search_for_dirty_csv_lines(@csv_contents),
 
 my $csv_file_new = $cpan->sanitize_csv($csv_file);
 
-ok( $csv_file eq $csv_file_new, "Should Pass, method must replace file" );
+ok( $csv_file eq $csv_file_new, "Should Pass, method must replace file." );
 
 undef @csv_contents;
 
@@ -54,7 +53,7 @@ cmp_ok( $final_size,   '>', 0 );
 cmp_ok( $initial_size, '>', $final_size );
 
 ok( !search_for_dirty_csv_lines(@csv_contents),
-    "Should Fail, This CSV file isnt dirty anymore"
+    "Should Fail, This CSV file isn't dirty anymore."
 );
 
 #
