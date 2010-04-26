@@ -4,5 +4,3 @@ Makefile.PL
 README
 lib/FreeBSD/Port/Maker.pm
 t/00-load.t
-t/pod-coverage.t
-t/pod.t

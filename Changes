@@ -1,5 +1,7 @@
-Revision history for FreeBSD-Port-Maker
+commit: 138509daf092df6db24d95d7fc1bc37cd5f518c2
+Author: Sun Apr 25 16:04:42 2010 -0300
+  Date: Otávio Fernandes <otaviof@gmail.com>
 
-0.01    Date/time
-        First version, released on an unsuspecting world.
+	initial versional, just like module-starter generated this
+
 
