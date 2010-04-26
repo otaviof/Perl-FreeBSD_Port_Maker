@@ -9,7 +9,7 @@ WriteMakefile(
     NAME         => 'FreeBSD::Port::Maker',
     AUTHOR       => 'Otavio Fernandes <otaviof@gmail.com>',
     VERSION_FROM => 'lib/FreeBSD/Port/Maker.pm',
-    PL_FILES     => {},
+    EXE_FILES    => [ 'bin/perl_port_maker.pl', ],
     PREREQ_PM    => {
         'File::Slurp'  => 9999.13,
         'Git::Wrapper' => 0.006,

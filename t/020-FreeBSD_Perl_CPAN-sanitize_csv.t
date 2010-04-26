@@ -16,7 +16,12 @@ sub search_for_dirty_csv_lines {
     return grep( !/^(\S+\w+\S+,\S+\w+\S+,\S+\w+\S+|)$/, @csv_lines );
 }
 
-my $cpan         = new FreeBSD::Perl::CPAN();
+my $cpan = new FreeBSD::Perl::CPAN();
+
+# we want an dirty CSV file
+$cpan->clear_sanitize
+    if ( $cpan->has_sanitize );
+
 my $csv_file     = $cpan->fetch_ratings();
 my @csv_contents = read_file($csv_file);
 my $initial_size = $#csv_contents;
@@ -32,17 +37,15 @@ ok( search_for_dirty_csv_lines(@csv_contents),
     "Should Pass, This CSV file is dirty!"
 );
 
+#
+# Sanitizing CSV
+#
+
 my $csv_file_new = $cpan->sanitize_csv($csv_file);
 
 ok( $csv_file eq $csv_file_new, "Should Pass, method must replace file" );
 
 undef @csv_contents;
-
-#
-# Sanitized CSV
-#
-
-$cpan->clear_sanitize;
 
 my @csv_contents_new = read_file($csv_file_new);
 my $final_size       = $#csv_contents_new;
