@@ -11,9 +11,11 @@ WriteMakefile(
     VERSION_FROM => 'lib/FreeBSD/Port/Maker.pm',
     EXE_FILES    => [ 'bin/perl_port_maker.pl', ],
     PREREQ_PM    => {
+        'File::Glob'   => 0,
         'File::Slurp'  => 9999.13,
         'Git::Wrapper' => 0.006,
         'LWP::Simple'  => 5.827,
+        'Moose'        => 1.01,
         'Test::More'   => 0.94,
     },
 
