@@ -1,3 +1,24 @@
+commit: 904dd692107203bf3211c9bf9505e9b4d3d960f0
+Author: Tue Apr 27 00:32:21 2010 -0300
+  Date: Otávio Fernandes <otaviof@gmail.com>
+
+	worknig on software flow
+
+
+commit: c9c56eeebd3abf414338e6c9a1930a206f32c3b1
+Author: Mon Apr 26 14:14:46 2010 -0300
+  Date: Otávio Fernandes <otaviof@gmail.com>
+
+	correcting Moose Class attributes and better tests
+
+
+commit: f10f98441745f6b3804661ae3d018f21f1f89a34
+Author: Mon Apr 26 14:12:59 2010 -0300
+  Date: Otávio Fernandes <otaviof@gmail.com>
+
+	correcting tests for use and unsanitized CSV file, and adding tests for Moose Class flags
+
+
 commit: ae27c4da46cedbc429e4b6e65dbd7de86d32d856
 Author: Mon Apr 26 01:20:49 2010 -0300
   Date: Otávio Fernandes <otaviof@gmail.com>
