@@ -15,12 +15,25 @@ has 'file' => (
     is      => 'rw',
     isa     => 'Str',
     default => sub {
-        my @indexes = </usr/ports/INDEX-?>;
+        my @indx = </usr/ports/INDEX-?>;
         die "Couldn't find an INDEX file."
-            if ( !@indexes );
-        return $indexes[$#indexes];
+            if ( !@indx );
+        return $indx[$#indx];
     },
 );
+
+sub create_hash {
+    my ($self) = @_;
+    my $indexes;
+    open( my $IDX, '<', $self->file )
+        or return;
+    while ( my $line = <$IDX> ) {
+        next if ( $line !~ /^(.*?)\|(\/.*?\w)\|.*?$/ );
+        $indexes->{$2} = $1;
+    }
+    close($IDX);
+    return $indexes;
+}
 
 1;
 
